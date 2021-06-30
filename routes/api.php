@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('/quizzes', 'QuizController');
+Route::apiResource('/quizzes', QuizController::class);
