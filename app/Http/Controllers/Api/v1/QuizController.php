@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\QuizResource;
 use App\Models\Quiz;
 
 final class QuizController extends Controller
@@ -12,10 +13,10 @@ final class QuizController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return array
+     * @return QuizResource
      */
-    public function index(): array
+    public function index(): QuizResource
     {
-        return Quiz::all();
+        return new QuizResource(Quiz::all());
     }
 }
