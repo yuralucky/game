@@ -9,6 +9,7 @@ build-code-job:
 
 test-code-job1:
   stage: test
+  script:
     # Install app dependencies
     - composer install
     # Set up .env
