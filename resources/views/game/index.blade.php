@@ -16,31 +16,27 @@
     <div class="row">
         <h3>Admin table</h3>
         <hr>
-        <table class="table table-dark">
+        <table class="table">
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Question</th>
-                <th scope="col">First answer</th>
-                <th scope="col">Second answer</th>
-                <th scope="col">Third answer</th>
-                <th scope="col">Fourth answer</th>
-                <th scope="col">Right answer</th>
-                <th scope="col">Image url</th>
-                <th scope="col">Alternative image url</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Website</th>
             </tr>
             </thead>
             <tbody>
+            @foreach($data as $item)
             <tr>
-                <a href="{{route('home')}}">Home</a>
+                <th scope="row">{{$item['id']}}</th>
+                <td>{{$item['name']}}</td>
+                <td>{{$item['email']}}</td>
+                <td>{{$item['website']}}</td>
             </tr>
-            <tr>
-                <a href="{{route('show')}}">Get data </a>
-            </tr>
-
+            @endforeach
+            <tr><a href="{{route('home')}}" class="btn btn-block badge-info">Home</a></tr>
             </tbody>
-        </table>
-    </div>
+        </table>    </div>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

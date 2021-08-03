@@ -16,7 +16,8 @@
     <div class="container">
         <div class="row">
             <div class="col-5 offset-2">
-                <div id="example"></div>
+                <a href="{{route('main-admin')}}">Go to admin</a>
+{{--                <div id="example"></div>--}}
             </div>
         </div>
     </div>

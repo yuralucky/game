@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 Route::prefix('admin')->group(function () {
-    Route::get('/', [AdminController::class, 'index']);
+    Route::get('/', [AdminController::class, 'index'])->name('main-admin');
 });
+Route::get('/show', [\App\Http\Controllers\GameController::class, 'index'])->name('show');
